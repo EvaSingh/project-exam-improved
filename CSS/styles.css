@@ -24,24 +24,6 @@ body{
     text-align: center;
     position: relative;
     color: white;
-   
-}
-
-.wrapper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: auto;  
-}
-
-.full-page{
-    margin: auto;
-    align-content: center;
-    height: 100%;
-    width: auto;
-    scroll-snap-align: start;   
 }
 
 h1{
@@ -51,8 +33,10 @@ h1{
 
 h2, h3{
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 100;
 }
+
+/* INTERFACE-----------------------------------------------------------------------------------*/
 
 ul{
     list-style-type: none;
@@ -80,23 +64,6 @@ a:hover{
     color:  #0B0F1A;
     background-color: white;
 }
-
-
-
-.img-fluid{
-    width: 100%;
-    height: auto;
-}
-
-
-.quote-section{
-    max-width: 960px;
-}
-
-.blockquote-footer{
-    color: white;
-}
-
 
 /* MAIN NAVIGATION ------------------------------------------------------------------------------------*/
 
@@ -137,7 +104,6 @@ a:hover{
     font-size: 1.5em;
 }
 
-
 /* HERO --------------------------------------------------------------------------------------*/
 
 
@@ -151,6 +117,41 @@ a:hover{
 
 .hero__items{
     transform: translate(0, 120px);
+}
+
+
+/* IMAGES ---------------------------------------------------------------------------------------*/
+
+.img-fluid{
+    width: 100%;
+    height: auto;
+}
+
+.quote-section{
+    max-width: 960px;
+}
+
+.blockquote-footer{
+    color: white;
+}
+
+/* SCROLL BEHAVIOUR HOMEPAGE-------------------------------------------------------------------------*/
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;  
+}
+
+.full-page{
+    margin: auto;
+    align-content: center;
+    height: 100%;
+    width: auto;
+    scroll-snap-align: start;   
 }
 
 /* HOMEPAGE SECTIONS -----------------------------------------------------------------------------*/
@@ -181,7 +182,6 @@ a:hover{
 
 #people-container{
     text-align: left;
-    
     max-width: 400px;
 }
 
@@ -196,11 +196,7 @@ a:hover{
     align-self: center;
 }
 
-
-
 /* ABOUT PAGE-------------------------------------------------------------------------------*/
-
-
 
 #apod-section a:hover{
     opacity: 60%;
@@ -208,8 +204,7 @@ a:hover{
 
 .about__intro{
     text-align: left;
-    max-width: 800px;
-    
+    max-width: 800px;    
 }
 
 /* CONTACT PAGE-----------------------------------------------------------------------------*/
@@ -256,7 +251,7 @@ input[type=submit]:hover {
     background-color:  #A9CFE2; /*Light blue*/
 }
 
-textarea {
+textarea{
     width: 100%;
     height: 150px;
     padding: 12px 20px;
@@ -264,14 +259,6 @@ textarea {
     box-sizing: border-box;
     border-radius: 4px;
     resize: none;
-}
-
-#email-input:valid {
-  border-color: black;
-}
-
-.email-input:invalid {
-  border-color: #B82B21; /*Red*/
 }
 
 .error{
@@ -293,19 +280,22 @@ textarea {
 }
 
 .social a:hover{
-    text-decoration: underline;
-    
+    text-decoration: underline;   
 }
 
 /* LAUNCHES PAGE ---------------------------------------------------------------------*/
 
 #launches-page{
-    background-image: url(../images/rocket.jpeg);
+    background-image: url(../images/rocket-launch.jpg);
     min-height: 100vh;;
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;   
+}
+
+#launches-page h1{
+    margin-bottom: 35px;
 }
 
 #scrolling-area{
@@ -327,30 +317,27 @@ textarea {
     color: white;
 }
 
-/* Firefox */
+
 * {
-  scrollbar-width: thin;
-  scrollbar-color: whitesmoke;
+    scrollbar-width: thin;
+    scrollbar-color: whitesmoke;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent;
-  
+    background: transparent; 
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 20px;
-  
+    background-color: white;
+    border-radius: 20px;  
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #a8bbbf;
+    background-color: #a8bbbf;
 }
 
 
@@ -359,18 +346,13 @@ textarea {
     
      .wrapper{
          scroll-snap-type: y proximity;
-     }
-    
-    #launch-section-homepage{
-        padding-right: 5%;
-    }     
+     }    
 }
 
 /*-----------------------------------------------*/
 
 @media only screen and (max-width: 900px) {
     
-
     #spacepeople-section-homepage{
         padding-left: 5%; 
     }
@@ -390,10 +372,6 @@ textarea {
     #launch-container{
         max-width: 90vw;
     }
-    
-    #launch-section-homepage{
-        justify-content: center;
-    }
        
 }
 
@@ -406,8 +384,8 @@ textarea {
     }
     
     #launch-section-homepage{
-        padding-right: 0;
-    }   
+        justify-content: center !important; 
+    }    
     
     #spacepeople-section-homepage{
 	   display: flex;

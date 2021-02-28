@@ -60,16 +60,4 @@ function validateForm(event) {
     } else {
         msgErr.style.display = "block";
     }
-}
-
-
-
-
-
-
-        
-
-
-    
-    
-   
+}  

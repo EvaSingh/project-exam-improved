@@ -10,14 +10,14 @@ fetch("https://api.spacexdata.com/v4/launches/next")
 
 
 function displayNextLaunch(launch) {
-    
+    let launchDate = new Date(launch.date_local).toLocaleString();
     const container = document.querySelector("#next-launch-container");
 
     container.innerHTML = `<div>
                               <h2 class="display-3">Next launch:</h2>
-                                  <h3>${launch.name}</h3>
-                                    <p><b>Launch time:</b> ${launch.date_local}</p>
-                                    <a href="launches.html" class="btn">More launches</a>
+                              <h3>${launch.name}</h3>
+                              <p>${launchDate}</p>
+                              <a href="launches.html" class="btn">More launches</a>
                          </div>`;
 }
 

@@ -11,11 +11,12 @@ function loopThroughLaunches(launches) {
     let newHTML = "";
     
     launches.forEach(function(launch) {
+        let launchDate = new Date(launch.date_local).toLocaleString();
          
         newHTML += `<div class="mb-5">
                         <h3>${launch.name}</h3>
-                            <p class="mb-0">Launch time: ${launch.date_local}</p>
-                            <a class="mb-4" href="${launch.links.reddit.campaign}" target="_blank">More &rarr;</a>
+                        <p class="mb-0">Launch time: ${launchDate}</p>
+                        <a class="mb-4" href="${launch.links.reddit.campaign}" target="_blank">More &rarr;</a>
                     </div>`;
     });
 
